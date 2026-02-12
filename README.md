@@ -21,30 +21,18 @@ This project is designed to **identify fraudulent jobs before they reach users**
 
 ---
 
-## 🔹 Dataset & Features
+## 🔹 Dataset
 
-### Text Features
-Combined all major text fields into one column:  
+The dataset used for this project is too large to host on GitHub.  
+You can download it directly from Kaggle:
 
-- Job title  
-- Job description  
-- Requirements  
-- Benefits  
-- Company profile  
+[Real or Fake Job Posting Prediction Dataset](https://www.kaggle.com/datasets/shivamb/real-or-fake-fake-jobposting-prediction)
 
-Transformed using **TF-IDF** to capture:  
-- Important words  
-- Scam patterns  
-- Suspicious phrases like *“no interview”*, *“immediate joining”*  
+**Dataset includes:**  
+- **Text features:** job title, job description, requirements, benefits, company profile  
+- **Metadata features:** telecommuting, employment type, required education & experience, industry, function, location  
 
-### Numeric & Categorical Features
-- Telecommuting  
-- Employment type  
-- Required education & experience  
-- Industry & function  
-- Location  
-
-Boolean fields converted to `0/1` for model learning.  
+> After downloading, save the CSV file in your project folder to run the app.  
 
 ---
 
@@ -63,7 +51,7 @@ Boolean fields converted to `0/1` for model learning.
 ### Logistic Regression
 - Selected because it works **very well with TF-IDF text data**  
 - **Fast and interpretable** — you can see which features influence predictions  
-- Handles **high-dimensional data efficiently**, which is important for text features  
+- Handles **high-dimensional data efficiently**  
 - Provides **class probabilities** for transparency in prediction confidence  
 
 ### Random Forest
@@ -107,3 +95,4 @@ pip install -r requirements.txt
 
 # Run the app
 streamlit run app.py
+
